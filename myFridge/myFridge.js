@@ -20,6 +20,15 @@ if (Meteor.isClient) {
             }
         });
     };
+    Template.productList.rendered = function () {
+        $('#supermarket').droppable({
+        drop: function (evt, ui) {
+            var query = {_id: $(ui.draggable).data('id')};
+            var data = {$set: {place: 'supermarket'}};
+            Products.update(query, data);
+        }
+    });
+};
 
 
 }
