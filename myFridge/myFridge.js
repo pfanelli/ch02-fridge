@@ -28,6 +28,14 @@ if (Meteor.isClient) {
             Products.update(query, data);
         }
     });
+
+    Template.productListItem.rendered = function () {
+        $(this.find('.draggable')).draggable({
+            cursor: 'move',
+            helper: 'clone'
+        });
+    };
+
 };
 
 
