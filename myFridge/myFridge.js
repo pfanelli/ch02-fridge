@@ -11,6 +11,16 @@ if (Meteor.isClient) {
             return Products.find({place: 'supermarket'});
         }
     });
+    Template.fridge.rendered = function () {
+        $('#fridge').droppable({
+            drop: function (evt, ui) {
+                var query = {_id: $(ui.draggable).data('id')};
+                var data = {$set: {place: 'fridge'}};
+                Products.update(query, data);
+            }
+        });
+    };
+
 
 }
 
