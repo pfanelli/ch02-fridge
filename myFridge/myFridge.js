@@ -6,6 +6,12 @@ if (Meteor.isClient) {
             return Products.find({place: 'fridge'});
         }
     });
+    Template.productList.helpers({
+        products: function(){
+            return Products.find({place: 'supermarket'});
+        }
+    });
+
 }
 
 if (Meteor.isServer) {
