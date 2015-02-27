@@ -57,10 +57,6 @@ if (Meteor.isClient) {
       helper: 'clone'
     });
   };
-
-};
-
-
 }
 
 if (Meteor.isServer) {
