@@ -1,4 +1,4 @@
-Products = new Meteor.Collection('products');
+Products = new Mongo.Collection('products');
 
 if (Meteor.isClient) {
   Template.fridge.helpers({
