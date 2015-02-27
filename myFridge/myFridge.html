@@ -10,7 +10,7 @@
 <template name="container">
   <div class="container">
     <div class="left">
-      {{>fridge}}
+      {{> fridge}}
     </div>
     <div class="right">
       {{> productList}}
@@ -23,7 +23,7 @@
     <img class="image-responsive" src="/empty-fridge.jpg" />
     <ul>
       {{#each products}}
-        <li>{{> productListItem}}</li>
+      <li>{{> productListItem}}</li>
       {{/each}}
     </ul>
   </div>
@@ -33,9 +33,9 @@
 <template name="productList">
   <div id="supermarket" class="box">
     <ul id="products">
-    {{#each products}}
-          <li>{{> productListItem}}</li>
-    {{/each}}
+      {{#each products}}
+      <li>{{> productListItem}}</li>
+      {{/each}}
     </ul>
   </div>
 </template>
@@ -43,4 +43,3 @@
 <template name="productListItem">
   <img src="{{img}}" data-id="{{_id}}" class="image-responsive product-image draggable" />
 </template>
-
